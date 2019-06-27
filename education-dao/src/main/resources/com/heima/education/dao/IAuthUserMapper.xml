@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heima.education.dao.IAuthUserDao">
+    <resultMap id="authMap" type="com.heima.education.domain.AuthUser">
+        <id property="id" column="id"/>
+        <result property="realname" column="realname"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="gender" column="gender"/>
+        <result property="header" column="header"/>
+        <result property="mobile" column="mobile"/>
+        <result property="status" column="status"/>
+        <result property="birthday" column="birthday"/>
+        <result property="education" column="education"/>
+        <result property="collegeCode" column="college_code"/>
+        <result property="collegeName" column="college_name"/>
+        <result property="certNo" column="cert_no"/>
+        <result property="title" column="title"/>
+        <result property="sign" column="sign"/>
+        <result property="openId" column="open_id"/>
+        <result property="wechatId" column="wechat_id"/>
+        <result property="qq" column="qq"/>
+        <result property="loginTime" column="login_time"/>
+        <result property="ip" column="ip"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="district" column="district"/>
+        <result property="weight" column="weight"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createUser" column="create_user"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updateUser" column="update_user"/>
+        <result property="del" column="del"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="authMap">
+       select * from t_auth_user
+    </select>
+
+
+</mapper>
